@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+  <style>
+      body{
+          text-align: center;
+          margin-top: 150px;
+      }
+      button{
+        width: 150px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        font-size: medium;
+        font-weight: 500;
+      }
+      .event{
+          margin-top: 30px;
+      }
+  </style>
+<body>
+    <div>
+        <button type="button" id="show">Click Here</button>
+        <p class="event" id="Event1">HERE</p>
+        <p class="event" id="Event2">HERE</p>
+        <p class="event" id="Event3">HERE</p>
+    </div>
+
+    <script>
+        let button = document.querySelector("#show");
+        let event1 = document.querySelector("#Event1");
+        let event2 = document.querySelector("#Event2");
+        let event3 = document.querySelector("#Event3");
+        
+        button.addEventListener('mouseover',function(){
+            event1.innerHTML = "Mouse Overed !"
+        });
+        button.addEventListener('click',function(){
+            event2.innerHTML = "Clicked !"
+        });
+        button.addEventListener('mouseout',function(){
+            event3.innerHTML = "Mouse Out !"
+        })
+        
+        
+    </script>
+</body>
+</html>
